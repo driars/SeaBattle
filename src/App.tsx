@@ -4,7 +4,10 @@ import { ChatBox } from "./Components/ChatBox";
 export const App = () => {
   return (
     <div>
-      App <ChatBox />
+      <div>App { process.env.name }</div>
+      <div>
+        <ChatBox />
+      </div>
     </div>
   );
 };
