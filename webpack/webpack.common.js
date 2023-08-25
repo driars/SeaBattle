@@ -36,14 +36,18 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '..', './src/index.html'),
+      template: path.resolve(__dirname, '..', './public/index.html'),
     }),
     new CleanWebpackPlugin(),
     new CopyWebPackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, '..', './public/styles'),
-          to: path.resolve(__dirname, '..', './build/styles'),
+          from: path.resolve(__dirname, '..', './public/'),
+          to: path.resolve(__dirname, '..', './build'),
+          filter: async (resourcePath) => {
+            if (path.basename(resourcePath) === 'index.html') return false
+            return true
+          },
         },
       ],
     }),
