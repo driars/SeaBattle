@@ -1,4 +1,4 @@
-const webpack = require('webpack')
+const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
@@ -8,4 +8,4 @@ module.exports = {
       'process.env.name': JSON.stringify('dev'),
     }),
   ],
-}
+};

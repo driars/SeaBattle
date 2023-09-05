@@ -1,7 +1,7 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const CopyWebPackPlugin = require('copy-webpack-plugin')
-const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebPackPlugin = require('copy-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
@@ -44,11 +44,11 @@ module.exports = {
           from: path.resolve(__dirname, '..', './public/'),
           to: path.resolve(__dirname, '..', './build'),
           filter: async (resourcePath) => {
-            if (path.basename(resourcePath) === 'index.html') return false
-            return true
+            if (path.basename(resourcePath) === 'index.html') return false;
+            return true;
           },
         },
       ],
     }),
   ],
-}
+};
