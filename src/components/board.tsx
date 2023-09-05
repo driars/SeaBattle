@@ -4,7 +4,7 @@ import './board.css';
 
 export const Board = () => {
   return (
-    <div className="board-container">
+    <div className="board-container" data-testid="board">
       {Array(10)
         .fill(0)
         .map((_, rowIndex) => (

@@ -1,5 +1,5 @@
 import React from 'react';
 
 export const Finish = () => {
-  return <div>Game Over</div>;
+  return <div data-testid="gameover">Game Over</div>;
 };

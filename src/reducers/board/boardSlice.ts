@@ -33,6 +33,14 @@ export const boardSlice = createSlice({
 
       if (ship) {
         state.ships[ship].selected++;
+
+        const remainCount = Object.keys(state.ships).reduce(
+          (sum, key) =>
+            sum + state.ships[key].count - state.ships[key].selected,
+          0
+        );
+
+        if (remainCount === 0) state.finish = true;
       }
     },
     setBoard: (state, action: PayloadAction<BoardState>) => {
