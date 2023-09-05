@@ -23,7 +23,11 @@ export const Element = ({ row, column }: Position) => {
 
   const element =
     type === ElementStatus.Empty ? null : (
-      <img src={ship ? SelectedIcon : FailedIcon} alt="icon" />
+      <img
+        src={ship ? SelectedIcon : FailedIcon}
+        alt="icon"
+        data-testid="element-icon"
+      />
     );
 
   return (
