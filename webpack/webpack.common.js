@@ -11,7 +11,6 @@ module.exports = {
   module: {
     rules: [
       {
-        // should use babel-loader for all ts js tsx and jsx files
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
         use: [{ loader: 'babel-loader' }],

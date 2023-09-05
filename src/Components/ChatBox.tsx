@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useAppDispatch, useAppSelector } from '../hooks'
+import { increment, selectCount } from '../reducers/counter/counterSlice'
 
 export const ChatBox = () => {
-  const [count, setCount] = useState(0)
-
-  const onClick = () => setCount((count) => count + 1)
+  const count = useAppSelector(selectCount)
+  const dispatch = useAppDispatch()
 
   return (
     <div>
       <span>{count}</span>
-      <button onClick={onClick}>Increase Count</button>
+      <button onClick={() => dispatch(increment())}>Increase Count</button>
     </div>
   )
 }
