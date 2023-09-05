@@ -1,3 +1,13 @@
-# React-TypeScript-WebPack-Babel-Eslint-Prettier
+# Sea Battle
 
-With this project, developers can build the infrastructure of a react project developed by TypeScript, WebPack, Babel, Eslint and Prettier.
+## Package Install
+`yarn`
+
+## Start Project
+`yarn start`
+
+## Build Project
+`yarn build`
+
+## Test Project
+`yarn test`
