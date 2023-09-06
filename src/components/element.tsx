@@ -10,9 +10,8 @@ import './element.css';
 
 export const Element = ({ row, column }: Position) => {
   const { type, ship } = useAppSelector(
-    (state) => state.board.value[row][column]
+    (state) => state.board.cells[row][column]
   );
-  const shipCount = useAppSelector((state) => state.board.ships[ship || '']);
   const dispatch = useAppDispatch();
 
   const onClick = useCallback(() => {
@@ -34,7 +33,7 @@ export const Element = ({ row, column }: Position) => {
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
     <div
       className={`element ${
-        shipCount && shipCount.selected === shipCount.count ? 'destroyed' : ''
+        type === ElementStatus.Finished ? 'destroyed' : ''
       }`}
       onClick={onClick}
       data-testid="element"

@@ -5,7 +5,7 @@ import ships from '../constants/ships.json';
 
 export const getShips = () => {
   const state: BoardState = {
-    value: Array(ROW_COUNT)
+    cells: Array(ROW_COUNT)
       .fill(0)
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       .map((_) =>
@@ -19,12 +19,9 @@ export const getShips = () => {
   };
 
   ships.board.forEach(({ positions, ship }) => {
-    state.ships[ship] = {
-      count: positions.length,
-      selected: 0,
-    };
+    state.ships[ship] = positions.length;
     positions.forEach(
-      ([row, column]) => (state.value[row][column].ship = ship)
+      ([row, column]) => (state.cells[row][column].ship = ship)
     );
   });
 
