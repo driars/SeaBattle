@@ -27,8 +27,8 @@ module.exports = {
   ],
   plugins: ['unused-imports'],
   rules: {
-    'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': ['error'],
+    'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/no-var-requires': 'off',
     'react/prop-types': 'off',
     'react/jsx-uses-react': 'off',
@@ -61,4 +61,4 @@ module.exports = {
       },
     ],
   },
-}
+};

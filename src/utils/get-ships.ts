@@ -7,11 +7,9 @@ export const getShips = () => {
   const state: BoardState = {
     cells: Array(ROW_COUNT)
       .fill(0)
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       .map((_) =>
         Array(COLUMN_COUNT)
           .fill(0)
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
           .map((_) => ({ type: ElementStatus.Empty }))
       ),
     ships: {},
