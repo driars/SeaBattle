@@ -1,15 +1,16 @@
 import React from 'react';
 import { Element } from './element';
 import './board.css';
+import { COLUMN_COUNT, ROW_COUNT } from '../constants';
 
 export const Board = () => {
   return (
     <div className="board-container" data-testid="board">
-      {Array(10)
+      {Array(ROW_COUNT)
         .fill(0)
         .map((_, rowIndex) => (
           <div key={`row ${rowIndex}`} className="row">
-            {Array(10)
+            {Array(COLUMN_COUNT)
               .fill(0)
               .map((_, columnIndex) => (
                 <Element
