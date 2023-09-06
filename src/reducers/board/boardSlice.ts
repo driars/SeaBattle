@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Position } from '../../types/position';
-import { ElementStatus, ElementValue } from '../../types/elementStatus';
-import type { RootState } from '../../store';
+import { Position } from 'types/position';
+import { ElementStatus, ElementValue } from 'types/elementStatus';
+import type { RootState } from 'store';
 import { COLUMN_COUNT, ROW_COUNT } from '../../constants';
 
 export interface BoardState {

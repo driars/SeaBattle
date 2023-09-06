@@ -1,11 +1,10 @@
 import React, { useCallback } from 'react';
-import { Position } from '../types/position';
-import { useAppDispatch, useAppSelector } from '../hooks';
-import { ElementStatus } from '../types/elementStatus';
-import { userClicked } from '../reducers/board/boardSlice';
-
-import FailedIcon from '../assets/icons/failed.svg';
-import SelectedIcon from '../assets/icons/selected.svg';
+import { Position } from 'types/position';
+import { useAppDispatch, useAppSelector } from 'hooks';
+import { ElementStatus } from 'types/elementStatus';
+import { userClicked } from 'reducers/board/boardSlice';
+import FailedIcon from 'assets/icons/failed.svg';
+import SelectedIcon from 'assets/icons/selected.svg';
 import './element.css';
 
 export const Element = ({ row, column }: Position) => {

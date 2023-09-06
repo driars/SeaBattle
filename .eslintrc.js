@@ -9,9 +9,7 @@ module.exports = {
       version: 'detect',
     },
     'import/resolver': {
-      node: {
-        extensions: ['.ts', '.tsx'],
-      },
+      typescript: {},
     },
   },
   extends: [
@@ -25,7 +23,7 @@ module.exports = {
     'prettier',
     'plugin:prettier/recommended',
   ],
-  plugins: ['unused-imports'],
+  plugins: ['unused-imports', '@typescript-eslint'],
   rules: {
     'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
