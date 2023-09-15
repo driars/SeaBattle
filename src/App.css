@@ -1,4 +1,12 @@
-.container {
-  background-color: lightgray;
+.body-container {
+  background-color: #53b4da;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+body {
+  color: white;
 }

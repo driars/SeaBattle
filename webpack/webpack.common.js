@@ -1,12 +1,14 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const CopyWebPackPlugin = require('copy-webpack-plugin')
-const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebPackPlugin = require('copy-webpack-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
   resolve: {
     extensions: ['.js', '.ts', '.tsx'],
+    plugins: [new TsconfigPathsPlugin({})],
   },
   module: {
     rules: [
@@ -44,11 +46,11 @@ module.exports = {
           from: path.resolve(__dirname, '..', './public/'),
           to: path.resolve(__dirname, '..', './build'),
           filter: async (resourcePath) => {
-            if (path.basename(resourcePath) === 'index.html') return false
-            return true
+            if (path.basename(resourcePath) === 'index.html') return false;
+            return true;
           },
         },
       ],
     }),
   ],
-}
+};

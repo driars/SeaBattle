@@ -8,6 +8,9 @@ module.exports = {
     react: {
       version: 'detect',
     },
+    'import/resolver': {
+      typescript: {},
+    },
   },
   extends: [
     'plugin:react/recommended',
@@ -20,10 +23,10 @@ module.exports = {
     'prettier',
     'plugin:prettier/recommended',
   ],
-  plugins: ['unused-imports'],
+  plugins: ['unused-imports', '@typescript-eslint'],
   rules: {
-    'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': ['error'],
+    'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/no-var-requires': 'off',
     'react/prop-types': 'off',
     'react/jsx-uses-react': 'off',
@@ -56,4 +59,4 @@ module.exports = {
       },
     ],
   },
-}
+};

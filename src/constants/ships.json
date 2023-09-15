@@ -1,0 +1,53 @@
+{
+  "fleet": {
+    "carrier": { "size": 5, "count": 1 },
+    "dreadnought": { "size": 4, "count": 1 },
+    "cruiser": { "size": 3, "count": 1 },
+    "destroyer": { "size": 3, "count": 1 },
+    "frigate": { "size": 2, "count": 1 }
+  },
+  "board": [
+    {
+      "ship": "carrier",
+      "positions": [
+        [1, 8],
+        [2, 8],
+        [3, 8],
+        [4, 8],
+        [5, 8]
+      ]
+    },
+    {
+      "ship": "dreadnought",
+      "positions": [
+        [5, 2],
+        [5, 3],
+        [5, 4],
+        [5, 5]
+      ]
+    },
+    {
+      "ship": "cruiser",
+      "positions": [
+        [7, 2],
+        [7, 3],
+        [7, 4]
+      ]
+    },
+    {
+      "ship": "destroyer",
+      "positions": [
+        [2, 0],
+        [2, 1],
+        [2, 2]
+      ]
+    },
+    {
+      "ship": "frigate",
+      "positions": [
+        [0, 0],
+        [1, 0]
+      ]
+    }
+  ]
+}
